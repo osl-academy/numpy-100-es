@@ -51,7 +51,9 @@ def create_jupyter_notebook(destination_filename='100_Numpy_exercises.ipynb'):
     nb['cells'].append(nbf.v4.new_markdown_cell(HEADERS["jupyter_instruction"]))
 
     # - Add initialisation
+    nb['cells'].append(nbf.v4.new_code_cell('"!pip install mdutils'))
     nb['cells'].append(nbf.v4.new_code_cell('%run initialise.py'))
+    
 
     # - Add questions and empty spaces for answers
     for n in range(1, 101):
