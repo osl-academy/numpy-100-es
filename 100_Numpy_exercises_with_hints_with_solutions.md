@@ -1,54 +1,49 @@
 
 
 
-# 100 numpy exercises
+# 100 ejercicios de numpy
 
-This is a collection of exercises that have been collected in the numpy mailing list, on stack 
-overflow
-and in the numpy documentation. The goal of this collection is to offer a quick reference for both old
-and new 
-users but also to provide a set of exercises for those who teach.
+Esta es una colección de ejercicios recogidos de distintas fuentes como: numpy mailing list, stackoverflow Y
+documentación de numpy. El objetivo de esta colección es ofrecer material para el aprendizaje de numpy.
 
+Este repositorio es una traducción del español del repositorio original en ingles 
+[Respositorio de rougier](https://github.com/rougier/numpy-100).
+Archivos generados de manera automática. Vea la documentación para cambiar preguntas/respuestas/ayudas (questions/answers/hints)
 
-If you find an error or think you've a better way to
- solve some of them, feel
-free to open an issue at <https://github.com/rougier/numpy-100>.
-File automatically generated. See the documentation to update questions/answers/hints programmatically.
-
-#### 1. Import the numpy package under the name `np` (★☆☆)
+#### 1. Importa el paquete `numpy` como `np` (★☆☆)
 `hint: import … as`
 
 ```python
 import numpy as np
 ```
-#### 2. Print the numpy version and the configuration (★☆☆)
+#### 2. Imprima por pantalla la versión y la configuración de numpy (★☆☆)
 `hint: np.__version__, np.show_config)`
 
 ```python
 print(np.__version__)
 np.show_config()
 ```
-#### 3. Create a null vector of size 10 (★☆☆)
+#### 3. Cree un vector null de tamaño 10 (vector de zeros)(★☆☆)
 `hint: np.zeros`
 
 ```python
 Z = np.zeros(10)
 print(Z)
 ```
-#### 4. How to find the memory size of any array (★☆☆)
+#### 4. Como encuentra el tamaño en memoria de un array (★☆☆)
 `hint: size, itemsize`
 
 ```python
 Z = np.zeros((10,10))
 print("%d bytes" % (Z.size * Z.itemsize))
 ```
-#### 5. How to get the documentation of the numpy add function from the command line? (★☆☆)
+#### 5. ¿Cómo obtiene la documentación de numpy desde la terminal (comando de línea)? (★☆☆)
 `hint: np.info`
 
 ```python
 %run `python -c "import numpy; numpy.info(numpy.add)"`
 ```
-#### 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
+#### 6. Crea un vector de ceros de tamaño 10 cuyo valor en la quinta posición sea 1 (★☆☆)
 `hint: array[4]`
 
 ```python
@@ -56,14 +51,14 @@ Z = np.zeros(10)
 Z[4] = 1
 print(Z)
 ```
-#### 7. Create a vector with values ranging from 10 to 49 (★☆☆)
+#### 7. Crea un vector con sus valores contegan los números del 10 a 49 (★☆☆)
 `hint: arange`
 
 ```python
 Z = np.arange(10,50)
 print(Z)
 ```
-#### 8. Reverse a vector (first element becomes last) (★☆☆)
+#### 8. Obrenga un vector invertido (el primer elemento se convierte en el último) (★☆☆)
 `hint: array[::-1]`
 
 ```python
@@ -71,35 +66,35 @@ Z = np.arange(50)
 Z = Z[::-1]
 print(Z)
 ```
-#### 9. Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)
+#### 9. Crea una matriz 3x3 cuyos valores contengan lo números del 0 al 8 (★☆☆)
 `hint: reshape`
 
 ```python
 Z = np.arange(9).reshape(3, 3)
 print(Z)
 ```
-#### 10. Find indices of non-zero elements from [1,2,0,0,4,0] (★☆☆)
+#### 10. Encuentre los elementos cuyos índice no son cero [1,2,0,0,4,0] (★☆☆)
 `hint: np.nonzero`
 
 ```python
 nz = np.nonzero([1,2,0,0,4,0])
 print(nz)
 ```
-#### 11. Create a 3x3 identity matrix (★☆☆)
+#### 11. Crea una matriz identidad de 3x3 (★☆☆)
 `hint: np.eye`
 
 ```python
 Z = np.eye(3)
 print(Z)
 ```
-#### 12. Create a 3x3x3 array with random values (★☆☆)
+#### 12. Crea un vector 3x3x3 con valores random (★☆☆)
 `hint: np.random.random`
 
 ```python
 Z = np.random.random((3,3,3))
 print(Z)
 ```
-#### 13. Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)
+#### 13. Crea una matriz 10x10 con valores random y encuentra el valor máximo yel mínimo (★☆☆)
 `hint: min, max`
 
 ```python
@@ -107,7 +102,7 @@ Z = np.random.random((10,10))
 Zmin, Zmax = Z.min(), Z.max()
 print(Zmin, Zmax)
 ```
-#### 14. Create a random vector of size 30 and find the mean value (★☆☆)
+#### 14. Crea un vector de tamaño 30 con valores random y encuentre el valor promedio (★☆☆)
 `hint: mean`
 
 ```python
@@ -115,7 +110,7 @@ Z = np.random.random(30)
 m = Z.mean()
 print(m)
 ```
-#### 15. Create a 2d array with 1 on the border and 0 inside (★☆☆)
+#### 15. Crea un vector 2D con los valores de 1 en el borde (es decir en la primera y última filas y columnas) con valore de 0 en el interior (★☆☆)
 `hint: array[1:-1, 1:-1]`
 
 ```python
@@ -123,7 +118,7 @@ Z = np.ones((10,10))
 Z[1:-1,1:-1] = 0
 print(Z)
 ```
-#### 16. How to add a border (filled with 0's) around an existing array? (★☆☆)
+#### 16. ¿Cómo añadir un borde (llenado con ceros) a un vector existente? (★☆☆)
 `hint: np.pad`
 
 ```python
@@ -136,7 +131,7 @@ Z[:, [0, -1]] = 0
 Z[[0, -1], :] = 0
 print(Z)
 ```
-#### 17. What is the result of the following expression? (★☆☆)
+#### 17. ¿Cuál es el resultado de la siguiente expresión? (★☆☆)
 ```python
 0 * np.nan
 np.nan == np.nan
@@ -155,14 +150,14 @@ print(np.nan - np.nan)
 print(np.nan in set([np.nan]))
 print(0.3 == 3 * 0.1)
 ```
-#### 18. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
+#### 18. Crea una matriz 5x5 con valores 1,2,3,4 justo debajo de la diagonal (★☆☆)
 `hint: np.diag`
 
 ```python
 Z = np.diag(1+np.arange(4),k=-1)
 print(Z)
 ```
-#### 19. Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)
+#### 19. Crea una matriz 8x8 y llénelo con un patrón similar al del tablero de ajedrez (★☆☆)
 `hint: array[::2]`
 
 ```python
@@ -170,27 +165,21 @@ Z = np.zeros((8,8),dtype=int)
 Z[1::2,::2] = 1
 Z[::2,1::2] = 1
 print(Z)
-
-# Alternative solution: Using reshaping
-arr = np.ones(64,dtype=int)
-arr[::2]=0
-arr = arr.reshape((8,8))
-print(arr)
 ```
-#### 20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element? (★☆☆)
+#### 20. Considere un (6,7,8) shape array, ¿Cuáles son los índices (x,y,z) del 100vo elemento? (★☆☆)
 `hint: np.unravel_index`
 
 ```python
 print(np.unravel_index(99,(6,7,8)))
 ```
-#### 21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)
+#### 21. Crea algo similar a un tablero de ajedez usando la función `tile` (★☆☆)
 `hint: np.tile`
 
 ```python
 Z = np.tile( np.array([[0,1],[1,0]]), (4,4))
 print(Z)
 ```
-#### 22. Normalize a 5x5 random matrix (★☆☆)
+#### 22. Normalice una matriz de 5x5 que contiene valores aleatorios (normalize los elementos usando la fórmula z-score) (★☆☆)
 `hint: (x -mean)/std`
 
 ```python
@@ -198,7 +187,8 @@ Z = np.random.random((5,5))
 Z = (Z - np.mean (Z)) / (np.std (Z))
 print(Z)
 ```
-#### 23. Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
+#### 23. Crea un vector que tenga como elementos vectores que tengan el tipo de dato `ubyte` (RGBA)
+Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
 `hint: np.dtype`
 
 ```python
@@ -207,7 +197,7 @@ color = np.dtype([("r", np.ubyte),
                   ("b", np.ubyte),
                   ("a", np.ubyte)])
 ```
-#### 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
+#### 24. Multiplique una matriz 5x3 y otra 3x2 (producto cruz) (★☆☆)
 `hint:`
 
 ```python
@@ -218,19 +208,20 @@ print(Z)
 Z = np.ones((5,3)) @ np.ones((3,2))
 print(Z)
 ```
-#### 25. Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
+#### 25. Dado un array 1D, niega todos los elemento que esten en el rango 3 a 8
+Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
 `hint: >, <`
 
 ```python
-# Author: Evgeni Burovski
+# Autor: Evgeni Burovski
 
 Z = np.arange(11)
 Z[(3 < Z) & (Z < 8)] *= -1
 print(Z)
 ```
-#### 26. What is the output of the following script? (★☆☆)
+#### 26. ¿Cuál es la salida del siguiente script? (★☆☆)
 ```python
-# Author: Jake VanderPlas
+# Autor: Jake VanderPlas
 
 print(sum(range(5),-1))
 from numpy import *
@@ -239,13 +230,14 @@ print(sum(range(5),-1))
 `hint: np.sum`
 
 ```python
-# Author: Jake VanderPlas
+# Autor: Jake VanderPlas
 
 print(sum(range(5),-1))
 from numpy import *
 print(sum(range(5),-1))
 ```
-#### 27. Consider an integer vector Z, which of these expressions are legal? (★☆☆)
+#### 27. Considere un vector de enteros Z, ¿Cuál de las siguientes expresiones son válidas?
+Consider an integer vector Z, which of these expressions are legal? (★☆☆)
 ```python
 Z**Z
 2 << Z >> 2
@@ -264,7 +256,7 @@ Z <- Z
 Z/1/1
 Z<Z>Z
 ```
-#### 28. What are the result of the following expressions? (★☆☆)
+#### 28. ¿Cuál es el resultado de las siguientes expresiones? (★☆☆)
 ```python
 np.array(0) / np.array(0)
 np.array(0) // np.array(0)
@@ -277,11 +269,12 @@ print(np.array(0) / np.array(0))
 print(np.array(0) // np.array(0))
 print(np.array([np.nan]).astype(int).astype(float))
 ```
-#### 29. How to round away from zero a float array ? (★☆☆)
+#### 29. ¿Cómo redondear alejado de cero en un vector con valores tipo float?
+How to round away from zero a float array ? (★☆☆)
 `hint: np.uniform, np.copysign, np.ceil, np.abs, np.where`
 
 ```python
-# Author: Charles R Harris
+# Autor: Charles R Harris
 
 Z = np.random.uniform(-10,+10,10)
 print(np.copysign(np.ceil(np.abs(Z)), Z))
@@ -289,7 +282,7 @@ print(np.copysign(np.ceil(np.abs(Z)), Z))
 # More readable but less efficient
 print(np.where(Z>0, np.ceil(Z), np.floor(Z)))
 ```
-#### 30. How to find common values between two arrays? (★☆☆)
+#### 30. ¿Cómo encontrar valores comunes entre dos vectores? (★☆☆)
 `hint: np.intersect1d`
 
 ```python
@@ -297,31 +290,31 @@ Z1 = np.random.randint(0,10,10)
 Z2 = np.random.randint(0,10,10)
 print(np.intersect1d(Z1,Z2))
 ```
-#### 31. How to ignore all numpy warnings (not recommended)? (★☆☆)
+#### 31. ¿Cómo ignorar todos los mensajes de warning de numpy (no recomendado)? (★☆☆)
 `hint: np.seterr, np.errstate`
 
 ```python
-# Suicide mode on
+# Ignorar las advertencias
 defaults = np.seterr(all="ignore")
 Z = np.ones(1) / 0
 
-# Back to sanity
+# Mostrar las advertencias
 _ = np.seterr(**defaults)
 
-# Equivalently with a context manager
+# Equivalentement usando with
 with np.errstate(all="ignore"):
     np.arange(3) / 0
 ```
-#### 32. Is the following expressions true? (★☆☆)
+#### 32. ¿Es la siguiente expresión verdadera (True)? (★☆☆)
 ```python
 np.sqrt(-1) == np.emath.sqrt(-1)
 ```
-`hint: imaginary number`
+`hint: número imaginario`
 
 ```python
 np.sqrt(-1) == np.emath.sqrt(-1)
 ```
-#### 33. How to get the dates of yesterday, today and tomorrow? (★☆☆)
+#### 33. ¿Cómo obtener las fechas de ayer, hoy y mañana? (★☆☆)
 `hint: np.datetime64, np.timedelta64`
 
 ```python
@@ -329,14 +322,15 @@ yesterday = np.datetime64('today') - np.timedelta64(1)
 today     = np.datetime64('today')
 tomorrow  = np.datetime64('today') + np.timedelta64(1)
 ```
-#### 34. How to get all the dates corresponding to the month of July 2016? (★★☆)
+#### 34. ¿Cómo obtener todas la fechas correspondientes al mes de Julio del 2016? (★★☆)
 `hint: np.arange(dtype=datetime64['D'])`
 
 ```python
 Z = np.arange('2016-07', '2016-08', dtype='datetime64[D]')
 print(Z)
 ```
-#### 35. How to compute ((A+B)*(-A/2)) in place (without copy)? (★★☆)
+#### 35. ¿Cómo calcular ((A+B)*(-A/2)) (sin usar la función `copy`)?
+How to compute ((A+B)*(-A/2)) in place (without copy)? (★★☆)
 `hint: np.add(out=), np.negative(out=), np.multiply(out=), np.divide(out=)`
 
 ```python
@@ -347,7 +341,8 @@ np.divide(A,2,out=A)
 np.negative(A,out=A)
 np.multiply(A,B,out=A)
 ```
-#### 36. Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)
+#### 36. Extraiga la parte entera de valores positivos de un vector que contenga valores aleatorios usando 4 diferentes métodos
+Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)
 `hint: %, np.floor, astype, np.trunc`
 
 ```python
@@ -359,7 +354,8 @@ print(np.floor(Z))
 print(Z.astype(int))
 print(np.trunc(Z))
 ```
-#### 37. Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
+#### 37. Crea una matriz 5x5 con los valores de las fin
+Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
 `hint: np.arange`
 
 ```python
@@ -371,7 +367,8 @@ print(Z)
 Z = np.tile(np.arange(0, 5), (5,1))
 print(Z)
 ```
-#### 38. Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
+#### 38. Cree una función que use "yield" para obtener 10 números enteros y úselos para construir un array(★☆☆)
+Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
 `hint: np.fromiter`
 
 ```python
@@ -381,14 +378,14 @@ def generate():
 Z = np.fromiter(generate(),dtype=float,count=-1)
 print(Z)
 ```
-#### 39. Create a vector of size 10 with values ranging from 0 to 1, both excluded (★★☆)
+#### 39. Cree un vector de tamaño 10 con los valores en el rango 0 a 1 (0 y 1 excluidos). (★★☆)
 `hint: np.linspace`
 
 ```python
 Z = np.linspace(0,1,11,endpoint=False)[1:]
 print(Z)
 ```
-#### 40. Create a random vector of size 10 and sort it (★★☆)
+#### 40. Cree un vector de tamaño 10 con valores aleatorios, luego ordénelos (★★☆).
 `hint: sort`
 
 ```python
@@ -396,31 +393,35 @@ Z = np.random.random(10)
 Z.sort()
 print(Z)
 ```
-#### 41. How to sum a small array faster than np.sum? (★★☆)
+#### 41. ¿Cómo se sumaría un pequeño vector de manera que lo haga más rápida que usando la función np.sum? (★★☆)
 `hint: np.add.reduce`
 
 ```python
-# Author: Evgeni Burovski
+# Autor: Evgeni Burovski
 
 Z = np.arange(10)
 np.add.reduce(Z)
 ```
-#### 42. Consider two random array A and B, check if they are equal (★★☆)
+#### 42. Considere 2 vectores A y B ¿Cómo verifica que son iguales? (★★☆)
+Consider two random array A and B, check if they are equal
 `hint: np.allclose, np.array_equal`
 
 ```python
 A = np.random.randint(0,2,5)
 B = np.random.randint(0,2,5)
 
+# Asumiendo un tamaño idéntico y tolerancia para la comparación sus valores
 # Assuming identical shape of the arrays and a tolerance for the comparison of values
 equal = np.allclose(A,B)
 print(equal)
 
+# Verificando en ambos el tamaño y sus valores, sin tolerancia (los valores deben ser exactamente iguales)
 # Checking both the shape and the element values, no tolerance (values have to be exactly equal)
 equal = np.array_equal(A,B)
 print(equal)
 ```
-#### 43. Make an array immutable (read-only) (★★☆)
+#### 43. Cree un vector inmutable (de sólo lectura) (★★☆)
+Make an array immutable (read-only)
 `hint: flags.writeable`
 
 ```python
@@ -428,7 +429,7 @@ Z = np.zeros(10)
 Z.flags.writeable = False
 Z[0] = 1
 ```
-#### 44. Consider a random 10x2 matrix representing cartesian coordinates, convert them to polar coordinates (★★☆)
+#### 44. Cree una maetriz 10x2 con elementos aleatorios,representando coordenadas cartesianas, conviertalas a coordenadas polares (★★☆).
 `hint: np.sqrt, np.arctan2`
 
 ```python
@@ -439,7 +440,7 @@ T = np.arctan2(Y,X)
 print(R)
 print(T)
 ```
-#### 45. Create random vector of size 10 and replace the maximum value by 0 (★★☆)
+#### 45. Crea un vector con 10 elementos aleatorios y reemplace el valor máximo con 0 (★★☆)
 `hint: argmax`
 
 ```python
@@ -447,7 +448,8 @@ Z = np.random.random(10)
 Z[Z.argmax()] = 0
 print(Z)
 ```
-#### 46. Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] area (★★☆)
+#### 46. Crea un vector structurado (structured array) con `x` e `y` como coordenadas, que generen un grilla (meshgrid) en el área [0, 1]x[0, 1] (★★☆)
+Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] area
 `hint: np.meshgrid`
 
 ```python
@@ -456,18 +458,18 @@ Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),
                              np.linspace(0,1,5))
 print(Z)
 ```
-#### 47. Given two arrays, X and Y, construct the Cauchy matrix C (Cij =1/(xi - yj)) (★★☆)
+#### 47. Dados dos vectores, X, e Y, construya la matriz de Cauchy C () (Cij =1/(xi - yj)) (★★☆)
 `hint: np.subtract.outer`
 
 ```python
-# Author: Evgeni Burovski
+# Autor: Evgeni Burovski
 
 X = np.arange(8)
 Y = X + 0.5
 C = 1.0 / np.subtract.outer(X, Y)
 print(np.linalg.det(C))
 ```
-#### 48. Print the minimum and maximum representable value for each numpy scalar type (★★☆)
+#### 48. Imprima el máximo y mínimo valor representable para un tipo de datos de numpy escalar (★★☆)
 `hint: np.iinfo, np.finfo, eps`
 
 ```python
@@ -479,7 +481,7 @@ for dtype in [np.float32, np.float64]:
    print(np.finfo(dtype).max)
    print(np.finfo(dtype).eps)
 ```
-#### 49. How to print all the values of an array? (★★☆)
+#### 49. ¿Cómo imprimir todos los valore de un vector? (★★☆)
 `hint: np.set_printoptions`
 
 ```python
@@ -487,7 +489,7 @@ np.set_printoptions(threshold=float("inf"))
 Z = np.zeros((40,40))
 print(Z)
 ```
-#### 50. How to find the closest value (to a given scalar) in a vector? (★★☆)
+#### 50. ¿Cómo encontrar el valor más cercano a un valor(valor escalar) en un vector? (★★☆)
 `hint: argmin`
 
 ```python
@@ -496,7 +498,7 @@ v = np.random.uniform(0,100)
 index = (np.abs(Z-v)).argmin()
 print(Z[index])
 ```
-#### 51. Create a structured array representing a position (x,y) and a color (r,g,b) (★★☆)
+#### 51. Crea un vector estructurada (structured array) representado la posición (x, y) y el color (r, g, b) (★★☆)
 `hint: dtype`
 
 ```python
@@ -507,7 +509,7 @@ Z = np.zeros(10, [ ('position', [ ('x', float, 1),
                                   ('b', float, 1)])])
 print(Z)
 ```
-#### 52. Consider a random vector with shape (100,2) representing coordinates, find point by point distances (★★☆)
+#### 52. Considere un vector de lelementos aleatorios, de dimensiones 100x2, representado coordenadas (x, y), encuentre las distancias de entre todos los puntos en una matriz 100x100 (★★☆)
 `hint: np.atleast_2d, T, np.sqrt`
 
 ```python
@@ -516,7 +518,7 @@ X,Y = np.atleast_2d(Z[:,0], Z[:,1])
 D = np.sqrt( (X-X.T)**2 + (Y-Y.T)**2)
 print(D)
 
-# Much faster with scipy
+# Usando scipy (una solución bastante rápida)
 import scipy
 # Thanks Gavin Heverly-Coulson (#issue 1)
 import scipy.spatial
@@ -525,7 +527,7 @@ Z = np.random.random((10,2))
 D = scipy.spatial.distance.cdist(Z,Z)
 print(D)
 ```
-#### 53. How to convert a float (32 bits) array into an integer (32 bits) in place?
+#### 53. ¿Cómo convertir un vector de float(32 bits) a un vector entero (32 bits) ?
 `hint: view and [:] =`
 
 ```python
@@ -536,7 +538,7 @@ Y = Z.view(np.int32)
 Y[:] = Z
 print(Y)
 ```
-#### 54. How to read the following file? (★★☆)
+#### 54. ¿Cómo podrías convertir el siguiente texto en una matriz de numpy? (★★☆)
 ```
 1, 2, 3, 4, 5
 6,  ,  , 7, 8
@@ -557,7 +559,7 @@ s = StringIO('''1, 2, 3, 4, 5
 Z = np.genfromtxt(s, delimiter=",", dtype=np.int)
 print(Z)
 ```
-#### 55. What is the equivalent of enumerate for numpy arrays? (★★☆)
+#### 55. ¿Cuál es el equivalente de la función `enumerate` para vectores numpy? (★★☆)
 `hint: np.ndenumerate, np.ndindex`
 
 ```python
@@ -567,7 +569,7 @@ for index, value in np.ndenumerate(Z):
 for index in np.ndindex(Z.shape):
     print(index, Z[index])
 ```
-#### 56. Generate a generic 2D Gaussian-like array (★★☆)
+#### 56. Genera una matriz 2d tipo campana de Gauss típica (2D Gaussian-like array) (★★☆)
 `hint: np.meshgrid, np.exp`
 
 ```python
@@ -577,11 +579,11 @@ sigma, mu = 1.0, 0.0
 G = np.exp(-( (D-mu)**2 / ( 2.0 * sigma**2 ) ) )
 print(G)
 ```
-#### 57. How to randomly place p elements in a 2D array? (★★☆)
+#### 57. ¿Cómo poner aleatoriamente p elementos en un array 2d? (★★☆)
 `hint: np.put, np.random.choice`
 
 ```python
-# Author: Divakar
+# Autor: Divakar
 
 n = 10
 p = 3
@@ -589,11 +591,12 @@ Z = np.zeros((n,n))
 np.put(Z, np.random.choice(range(n*n), p, replace=False),1)
 print(Z)
 ```
-#### 58. Subtract the mean of each row of a matrix (★★☆)
+#### 58. Dada una matriz, resta a cada elemento de una fila el promedio de la fila (★★☆)
+Subtract the mean of each row of a matrix (★★☆)
 `hint: mean(axis=,keepdims=)`
 
 ```python
-# Author: Warren Weckesser
+# Autor: Warren Weckesser
 
 X = np.random.rand(5, 10)
 
@@ -605,21 +608,23 @@ Y = X - X.mean(axis=1).reshape(-1, 1)
 
 print(Y)
 ```
-#### 59. How to sort an array by the nth column? (★★☆)
+#### 59. Cómo ordenar una matriz teniendo como referencia la n ava columna (★★☆)
+How to sort an array by the nth column? (★★☆)
 `hint: argsort`
 
 ```python
-# Author: Steve Tjoa
+# Autor: Steve Tjoa
 
 Z = np.random.randint(0,10,(3,3))
 print(Z)
 print(Z[Z[:,1].argsort()])
 ```
-#### 60. How to tell if a given 2D array has null columns? (★★☆)
+#### 60. ¿Cómo averiguar si una matriz tienen columnas nulas? (★★☆)
+How to tell if a given 2D array has null columns? (★★☆)
 `hint: any, ~`
 
 ```python
-# Author: Warren Weckesser
+# Autor: Warren Weckesser
 
 # null : 0 
 Z = np.random.randint(0,3,(3,10))
@@ -633,7 +638,8 @@ Z=np.array([
 ])
 print(np.isnan(Z).all(axis=0))
 ```
-#### 61. Find the nearest value from a given value in an array (★★☆)
+#### 61. Encuentre el valor más cercano a un valor dado en un vector (★★☆) 
+Find the nearest value from a given value in an array (★★☆)
 `hint: np.abs, argmin, flat`
 
 ```python
@@ -642,7 +648,8 @@ z = 0.5
 m = Z.flat[np.abs(Z - z).argmin()]
 print(m)
 ```
-#### 62. Considering two arrays with shape (1,3) and (3,1), how to compute their sum using an iterator? (★★☆)
+#### 62. Considere 2 arrays con dimensiones (1, 3) y (3, 1), ¿Cómo calcular su suma usando un iterador? (★★☆)
+Considering two arrays with shape (1,3) and (3,1), how to compute their sum using an iterator? (★★☆)
 `hint: np.nditer`
 
 ```python
@@ -652,7 +659,8 @@ it = np.nditer([A,B,None])
 for x,y,z in it: z[...] = x + y
 print(it.operands[2])
 ```
-#### 63. Create an array class that has a name attribute (★★☆)
+#### 63. Crea un clase vector (vector class) que tenga name como atributo (★★☆)
+Create an array class that has a name attribute (★★☆)
 `hint: class method`
 
 ```python
@@ -668,11 +676,12 @@ class NamedArray(np.ndarray):
 Z = NamedArray(np.arange(10), "range_10")
 print (Z.name)
 ```
-#### 64. Consider a given vector, how to add 1 to each element indexed by a second vector (be careful with repeated indices)? (★★★)
+#### 64. Dado un vector Z, ¿Cómo añadir 1 a cada elemento en las posiciones dadas por otro vector I? (tenga cuidado con los índices repetidos) (★★★)
+Consider a given vector, how to add 1 to each element indexed by a second vector (be careful with repeated indices)? (★★★)
 `hint: np.bincount | np.add.at`
 
 ```python
-# Author: Brett Olsen
+# Autor: Brett Olsen
 
 Z = np.ones(10)
 I = np.random.randint(0,len(Z),20)
@@ -680,26 +689,32 @@ Z += np.bincount(I, minlength=len(Z))
 print(Z)
 
 # Another solution
-# Author: Bartosz Telenczuk
+# Autor: Bartosz Telenczuk
 np.add.at(Z, I, 1)
 print(Z)
 ```
-#### 65. How to accumulate elements of a vector (X) to an array (F) based on an index list (I)? (★★★)
+#### 65. ¿Cómo acumular (sumar) los elementos de un vector X en un vector F de acuerdo a un vector de posiciones I? (★★★)
+```python
+X = [1,2,3,4,5,6]
+I = [1,3,9,3,4,1]
+# Resultado F = [0, 7, 0, 6, 5, 0, 0, 0, 0, 3]
+```
 `hint: np.bincount`
 
 ```python
-# Author: Alan G Isaac
+# Autor: Alan G Isaac
 
 X = [1,2,3,4,5,6]
 I = [1,3,9,3,4,1]
 F = np.bincount(I,X)
 print(F)
 ```
-#### 66. Considering a (w,h,3) image of (dtype=ubyte), compute the number of unique colors (★★☆)
+#### 66. Considere un numpy array de dimensiones (w, h, 3) que representa una imagen, calcule el número de colores únicos (★★☆)
+Considering a (w,h,3) image of (dtype=ubyte), compute the number of unique colors (★★☆)
 `hint: np.unique`
 
 ```python
-# Author: Fisher Wang
+# Autor: Fisher Wang
 
 w, h = 256, 256
 I = np.random.randint(0, 4, (h, w, 3)).astype(np.ubyte)
@@ -708,7 +723,7 @@ n = len(colors)
 print(n)
 
 # Faster version
-# Author: Mark Setchell
+# Autor: Mark Setchell
 # https://stackoverflow.com/a/59671950/2836621
 
 w, h = 256, 256
@@ -721,7 +736,8 @@ I24 = np.dot(I.astype(np.uint32),[1,256,65536])
 n = len(np.unique(I24))
 print(n)
 ```
-#### 67. Considering a four dimensions array, how to get sum over the last two axis at once? (★★★)
+#### 67. Considere un array de 4 dimensiones, ¿Cómo obtener la suma de las dos últimas dimensiones ó ejes? (★★★)
+Considering a four dimensions array, how to get sum over the last two axis at once? (★★★)
 `hint: sum(axis=(-2,-1))`
 
 ```python
@@ -734,11 +750,19 @@ print(sum)
 sum = A.reshape(A.shape[:-2] + (-1,)).sum(axis=-1)
 print(sum)
 ```
-#### 68. Considering a one-dimensional vector D, how to compute means of subsets of D using a vector S of same size describing subset  indices? (★★★)
+#### 68. Considere un vector unidemensional D, ¿cómo calcular los promedios de los subsets de D, si se tienen un vector S del mismo tamaño describiendo los índices de las posiciones de las cuáles deben obtenerse los promedios?(★★★)
+```python
+# Sea por ejemplo D
+D = [0.3, 0.5, 0.2, 0.7, 1., -0.6]
+# y S
+S = [0, 1, 1, 2, 2, 2]
+# El vector de los promedios será
+R = [0.3, 0.35, 0.36667]
+```
 `hint: np.bincount`
 
 ```python
-# Author: Jaime Fernández del Río
+# Autor: Jaime Fernández del Río
 
 D = np.random.uniform(0,1,100)
 S = np.random.randint(0,10,100)
@@ -747,33 +771,34 @@ D_counts = np.bincount(S)
 D_means = D_sums / D_counts
 print(D_means)
 
-# Pandas solution as a reference due to more intuitive code
+# La solución usando pandas
 import pandas as pd
 print(pd.Series(D).groupby(S).mean())
 ```
-#### 69. How to get the diagonal of a dot product? (★★★)
+#### 69. ¿Cómo obtener la diagonal de una matriz que es resultado de la operación entre dos matrices `np.dot(A, B)`? Use las matrices A y B para su respuesta.(★★★)
 `hint: np.diag`
 
 ```python
-# Author: Mathieu Blondel
+# Autor: Mathieu Blondel
 
 A = np.random.uniform(0,1,(5,5))
 B = np.random.uniform(0,1,(5,5))
 
-# Slow version
+# versión lenta
 np.diag(np.dot(A, B))
 
-# Fast version
+# versión rápida
 np.sum(A * B.T, axis=1)
 
-# Faster version
+# versión más rápida
 np.einsum("ij,ji->i", A, B)
 ```
-#### 70. Consider the vector [1, 2, 3, 4, 5], how to build a new vector with 3 consecutive zeros interleaved between each value? (★★★)
+#### 70. Sea el vector [1, 2, 3, 4, 5], ¿Cómo construir un nuevo vector con 3 consecutivos zeros intercalados entre cada valor?  (★★★)
+Consider the vector [1, 2, 3, 4, 5], how to build a new vector with 3 consecutive zeros interleaved between each value? (★★★)
 `hint: array[::4]`
 
 ```python
-# Author: Warren Weckesser
+# Autor: Warren Weckesser
 
 Z = np.array([1,2,3,4,5])
 nz = 3
@@ -781,7 +806,7 @@ Z0 = np.zeros(len(Z) + (len(Z)-1)*(nz))
 Z0[::nz+1] = Z
 print(Z0)
 ```
-#### 71. Consider an array of dimension (5,5,3), how to mulitply it by an array with dimensions (5,5)? (★★★)
+#### 71. Sea un arrays de dimensiones (5, 5, 3), cómo multiplicarlo por un array de dimensiones (5, 5)? (★★★)
 `hint: array[:, :, None]`
 
 ```python
@@ -789,21 +814,22 @@ A = np.ones((5,5,3))
 B = 2*np.ones((5,5))
 print(A * B[:,:,None])
 ```
-#### 72. How to swap two rows of an array? (★★★)
+#### 72. ¿Cómo intercambiar dos filas en un array? (★★★)
 `hint: array[[]] = array[[]]`
 
 ```python
-# Author: Eelco Hoogendoorn
+# Autor: Eelco Hoogendoorn
 
 A = np.arange(25).reshape(5,5)
 A[[0,1]] = A[[1,0]]
 print(A)
 ```
-#### 73. Consider a set of 10 triplets describing 10 triangles (with shared vertices), find the set of unique line segments composing all the  triangles (★★★)
+#### 73. Sea un set de tripletes describiendo 10 triangulos (con lados compartidos), encuentre el set de las líneas que componen todos lo triangulos. (★★★)
+Consider a set of 10 triplets describing 10 triangles (with shared vertices), find the set of unique line segments composing all the  triangles (★★★)
 `hint: repeat, np.roll, np.sort, view, np.unique`
 
 ```python
-# Author: Nicolas P. Rougier
+# Autor: Nicolas P. Rougier
 
 faces = np.random.randint(0,100,(10,3))
 F = np.roll(faces.repeat(2,axis=1),-1,axis=1)
@@ -813,21 +839,27 @@ G = F.view( dtype=[('p0',F.dtype),('p1',F.dtype)] )
 G = np.unique(G)
 print(G)
 ```
-#### 74. Given a sorted array C that corresponds to a bincount, how to produce an array A such that np.bincount(A) == C? (★★★)
+#### 74. Dado un array ordenado C qur corresponde a el resultado de un bitcount, ¿cóm oproducir un array A tal que np.bincount(A) = C ? (★★★)
 `hint: np.repeat`
 
 ```python
-# Author: Jaime Fernández del Río
+# Autor: Jaime Fernández del Río
 
 C = np.bincount([1,1,2,3,4,4,6])
 A = np.repeat(np.arange(len(C)), C)
 print(A)
 ```
-#### 75. How to compute averages using a sliding window over an array? (★★★)
+#### 75. ¿Cómo calcular los promedios de rango variable sobre un array? (★★★)
+```python
+# Sea
+Z = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Sus promedios en un rango de n = 3
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
 `hint: np.cumsum, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 
 ```python
-# Author: Jaime Fernández del Río
+# Autor: Jaime Fernández del Río
 
 def moving_average(a, n=3) :
     ret = np.cumsum(a, dtype=float)
@@ -836,19 +868,27 @@ def moving_average(a, n=3) :
 Z = np.arange(20)
 print(moving_average(Z, n=3))
 
-# Author: Jeff Luo (@Jeff1999)
-# make sure your NumPy >= 1.20.0
+# Autor: Jeff Luo (@Jeff1999)
+# versión de NumPy >= 1.20.0
 
 from numpy.lib.stride_tricks import sliding_window_view
 
 Z = np.arange(20)
 print(sliding_window_view(Z, window_shape=3).mean(axis=-1))
 ```
-#### 76. Consider a one-dimensional array Z, build a two-dimensional array whose first row is (Z[0],Z[1],Z[2]) and each subsequent row is  shifted by 1 (last row should be (Z[-3],Z[-2],Z[-1]) (★★★)
+#### 76. Sea un vector Z unidimensional, contruya un vector de dos dimensiones (matriz) del cuál su primera fila sea (Z[0],Z[1],Z[2]), su segunda (Z[1],Z[2],Z[3]), es decir que cada siguiente fila empiece con el segundo elementos de la anterior fila, note que (la última fila debería ser (Z[-3],Z[-2],Z[-1]) (★★★)
+
+```python
+# Sea Z y R lo que se busca
+Z = [0 1 2 3 4]
+R = [[0 1 2]
+     [1 2 3]
+     [2 3 4]]
+```
 `hint: from numpy.lib import stride_tricks, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 
 ```python
-# Author: Joe Kington / Erik Rigtorp
+# Autor: Joe Kington / Erik Rigtorp
 from numpy.lib import stride_tricks
 
 def rolling(a, window):
@@ -858,16 +898,16 @@ def rolling(a, window):
 Z = rolling(np.arange(10), 3)
 print(Z)
 
-# Author: Jeff Luo (@Jeff1999)
+# Autor: Jeff Luo (@Jeff1999)
 
 Z = np.arange(10)
 print(sliding_window_view(Z, window_shape=3))
 ```
-#### 77. How to negate a boolean, or to change the sign of a float inplace? (★★★)
+#### 77. ¿Cómo negar un valor boolean, o cambiar el signo de un valor float? (inplace) (★★★)
 `hint: np.logical_not, np.negative`
 
 ```python
-# Author: Nathaniel J. Smith
+# Autor: Nathaniel J. Smith
 
 Z = np.random.randint(0,2,100)
 np.logical_not(Z, out=Z)
@@ -875,7 +915,8 @@ np.logical_not(Z, out=Z)
 Z = np.random.uniform(-1.0,1.0,100)
 np.negative(Z, out=Z)
 ```
-#### 78. Consider 2 sets of points P0,P1 describing lines (2d) and a point p, how to compute distance from p to each line i (P0[i],P1[i])? (★★★)
+#### 78. Sean dos sets puntos P0 y P1 tienen el mismo tamaño, el primer punto de P0 describe un línea con el primer punto de P1 y así con todos los elementos de P0 y P1, también se nos da un punto P. 
+¿Cómo calcular la distancia del punto P a cada linea que es descrita por los pares de puntos de los sets? (★★★)
 `No hints provided...`
 
 ```python
@@ -892,11 +933,12 @@ P1 = np.random.uniform(-10,10,(10,2))
 p  = np.random.uniform(-10,10,( 1,2))
 print(distance(P0, P1, p))
 ```
-#### 79. Consider 2 sets of points P0,P1 describing lines (2d) and a set of points P, how to compute distance from each point j (P[j]) to each line i (P0[i],P1[i])? (★★★)
+#### 79. Sean dos sets puntos P0 y P1 tienen el mismo tamaño, el primer punto de P0 describe un línea con el primer punto de P1 y así con todos los elementos de P0 y P1, también se nos da un set de puntos P. 
+¿Cómo calcular la distancia de los puntos  de P a cada linea que es descrita por los pares de puntos de los sets? (★★★)
 `No hints provided...`
 
 ```python
-# Author: Italmassov Kuanysh
+# Autor: Italmassov Kuanysh
 
 # based on distance function from previous question
 P0 = np.random.uniform(-10, 10, (10,2))
@@ -908,7 +950,7 @@ print(np.array([distance(P0,P1,p_i) for p_i in p]))
 `hint: minimum maximum`
 
 ```python
-# Author: Nicolas Rougier
+# Autor: Nicolas Rougier
 
 Z = np.random.randint(0,10,(10,10))
 shape = (5,5)
@@ -936,26 +978,26 @@ R[r] = Z[z]
 print(Z)
 print(R)
 ```
-#### 81. Consider an array Z = [1,2,3,4,5,6,7,8,9,10,11,12,13,14], how to generate an array R = [[1,2,3,4], [2,3,4,5], [3,4,5,6], ..., [11,12,13,14]]? (★★★)
+#### 81. Sea el vector Z = [1,2,3,4,5,6,7,8,9,10,11,12,13,14], ¿Cómo generar el vector R = [[1,2,3,4], [2,3,4,5], [3,4,5,6], ..., [11,12,13,14]]? (★★★)
 `hint: stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 
 ```python
-# Author: Stefan van der Walt
+# Autor: Stefan van der Walt
 
 Z = np.arange(1,15,dtype=np.uint32)
 R = stride_tricks.as_strided(Z,(11,4),(4,4))
 print(R)
 
-# Author: Jeff Luo (@Jeff1999)
+# Autor: Jeff Luo (@Jeff1999)
 
 Z = np.arange(1, 15, dtype=np.uint32)
 print(sliding_window_view(Z, window_shape=4))
 ```
-#### 82. Compute a matrix rank (★★★)
+#### 82. Calcule el rango de un matriz (★★★)
 `hint: np.linalg.svd, np.linalg.matrix_rank`
 
 ```python
-# Author: Stefan van der Walt
+# Autor: Stefan van der Walt
 
 Z = np.random.uniform(0,1,(10,10))
 U, S, V = np.linalg.svd(Z) # Singular Value Decomposition
@@ -963,12 +1005,12 @@ rank = np.sum(S > 1e-10)
 print(rank)
 
 # alternative solution:
-# Author: Jeff Luo (@Jeff1999)
+# Autor: Jeff Luo (@Jeff1999)
 
 rank = np.linalg.matrix_rank(Z)
 print(rank)
 ```
-#### 83. How to find the most frequent value in an array?
+#### 83. ¿Cómo encontrar el valor más frecuente en un array? (★★★)
 `hint: np.bincount, argmax`
 
 ```python
@@ -979,7 +1021,7 @@ print(np.bincount(Z).argmax())
 `hint: stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 
 ```python
-# Author: Chris Barker
+# Autor: Chris Barker
 
 Z = np.random.randint(0,5,(10,10))
 n = 3
@@ -988,16 +1030,17 @@ j = 1 + (Z.shape[1]-3)
 C = stride_tricks.as_strided(Z, shape=(i, j, n, n), strides=Z.strides + Z.strides)
 print(C)
 
-# Author: Jeff Luo (@Jeff1999)
+# Autor: Jeff Luo (@Jeff1999)
 
 Z = np.random.randint(0,5,(10,10))
 print(sliding_window_view(Z, window_shape=(3, 3)))
 ```
-#### 85. Create a 2D array subclass such that Z[i,j] == Z[j,i] (★★★)
+#### 85. Crea un matriz cuya subclase tenga Z[i,j] = Z[j,i] (★★★)
+Create a 2D array subclass such that Z[i,j] == Z[j,i] (★★★)
 `hint: class method`
 
 ```python
-# Author: Eric O. Lebigot
+# Autor: Eric O. Lebigot
 # Note: only works for 2d array and value setting using indices
 
 class Symetric(np.ndarray):
@@ -1017,7 +1060,7 @@ print(S)
 `hint: np.tensordot`
 
 ```python
-# Author: Stefan van der Walt
+# Autor: Stefan van der Walt
 
 p, n = 10, 20
 M = np.ones((p,n,n))
@@ -1031,11 +1074,11 @@ print(S)
 # Thus, summing over the paired axes 0 and 0 (of M and V independently),
 # and 2 and 1, to remain with a (n,1) vector.
 ```
-#### 87. Consider a 16x16 array, how to get the block-sum (block size is 4x4)? (★★★)
+#### 87. Sea un 16x16 array, ¿cómo obtener la suma en bloques (tamaño del bloque 4x4)? (★★★)
 `hint: np.add.reduceat, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 
 ```python
-# Author: Robert Kern
+# Autor: Robert Kern
 
 Z = np.ones((16,16))
 k = 4
@@ -1044,7 +1087,7 @@ S = np.add.reduceat(np.add.reduceat(Z, np.arange(0, Z.shape[0], k), axis=0),
 print(S)
 
 # alternative solution:
-# Author: Sebastian Wallkötter (@FirefoxMetzger)
+# Autor: Sebastian Wallkötter (@FirefoxMetzger)
 
 Z = np.ones((16,16))
 k = 4
@@ -1052,17 +1095,24 @@ k = 4
 windows = np.lib.stride_tricks.sliding_window_view(Z, (k, k))
 S = windows[::k, ::k, ...].sum(axis=(-2, -1))
 
-# Author: Jeff Luo (@Jeff1999)
+# Autor: Jeff Luo (@Jeff1999)
 
 Z = np.ones((16, 16))
 k = 4
 print(sliding_window_view(Z, window_shape=(k, k))[::k, ::k].sum(axis=(-2, -1)))
 ```
-#### 88. How to implement the Game of Life using numpy arrays? (★★★)
-`No hints provided...`
+#### 88. ¿Cómo implementar el Juego de la Vida usando numpy arrays? (★★★)
+Juego de la Vida (Game Life)
+Se trata de un juego de cero jugadores, lo que quiere decir que su evolución está determinada por el estado inicial y no necesita ninguna entrada de datos posterior. El "tablero de juego" es una malla plana formada por cuadrados (las "células") que se extiende por el infinito en todas las direcciones. Por tanto, cada célula tiene 8 células "vecinas", que son las que están próximas a ella, incluidas las diagonales. Las células tienen dos estados: están "vivas" o "muertas" (o "encendidas" y "apagadas"). El estado de las células evoluciona a lo largo de unidades de tiempo discretas (se podría decir que por turnos). El estado de todas las células se tiene en cuenta para calcular el estado de las mismas al turno siguiente. Todas las células se actualizan simultáneamente en cada turno, siguiendo estas reglas:
+    Nace: Si una célula muerta tiene exactamente 3 células vecinas vivas "nace" (es decir, al turno siguiente estará viva).
+    Muere: una célula viva puede morir por uno de 2 casos:
+        Sobrepoblación: si tiene más de tres vecinos alrededor.
+        Aislamiento: si tiene solo un vecino alrededor o ninguno.
+    Vive: una célula se mantiene viva si tiene 2 o 3 vecinos a su alrededor.
+`![Juego de la Vida](https://es.wikipedia.org/wiki/Juego_de_la_vida)`
 
 ```python
-# Author: Nicolas Rougier
+# Autor: Nicolas Rougier
 
 def iterate(Z):
     # Count neighbours
@@ -1081,7 +1131,7 @@ Z = np.random.randint(0,2,(50,50))
 for i in range(100): Z = iterate(Z)
 print(Z)
 ```
-#### 89. How to get the n largest values of an array (★★★)
+#### 89. ¿Cómo obtener el enésimo (n-avo) valor más grande de un vector? (★★★)
 `hint: np.argsort | np.argpartition`
 
 ```python
@@ -1095,11 +1145,11 @@ print (Z[np.argsort(Z)[-n:]])
 # Fast
 print (Z[np.argpartition(-Z,n)[:n]])
 ```
-#### 90. Given an arbitrary number of vectors, build the cartesian product (every combinations of every item) (★★★)
+#### 90. Dado un arbitrario número de vectores, contruya el producto cartesiano (la combinación de cada elemento con todos lo elementos) (★★★)
 `hint: np.indices`
 
 ```python
-# Author: Stefan Van der Walt
+# Autor: Stefan Van der Walt
 
 def cartesian(arrays):
     arrays = [np.asarray(a) for a in arrays]
@@ -1126,11 +1176,11 @@ R = np.core.records.fromarrays(Z.T,
                                formats = 'S8, f8, i8')
 print(R)
 ```
-#### 92. Consider a large vector Z, compute Z to the power of 3 using 3 different methods (★★★)
+#### 92. Dado un vector muy largo Z, calcule Z elevado a la potencia 3 usando 3 diferentes métodos (★★★)
 `hint: np.power, *, np.einsum`
 
 ```python
-# Author: Ryan G.
+# Autor: Ryan G.
 
 x = np.random.rand(int(5e7))
 
@@ -1138,11 +1188,12 @@ x = np.random.rand(int(5e7))
 %timeit x*x*x
 %timeit np.einsum('i,i,i->i',x,x,x)
 ```
-#### 93. Consider two arrays A and B of shape (8,3) and (2,2). How to find rows of A that contain elements of each row of B regardless of the order of the elements in B? (★★★)
+#### 93. Dados dos arrays A y B de tamaños (8, 3) y (2, 2) repectivamente. Cómo encontrar las fila de A que contengan elementos de cada fila de B 
+Consider two arrays A and B of shape (8,3) and (2,2). How to find rows of A that contain elements of each row of B regardless of the order of the elements in B? (★★★)
 `hint: np.where`
 
 ```python
-# Author: Gabe Schwartz
+# Autor: Gabe Schwartz
 
 A = np.random.randint(0,5,(8,3))
 B = np.random.randint(0,5,(2,2))
@@ -1151,11 +1202,11 @@ C = (A[..., np.newaxis, np.newaxis] == B)
 rows = np.where(C.any((3,1)).all(1))[0]
 print(rows)
 ```
-#### 94. Considering a 10x3 matrix, extract rows with unequal values (e.g. [2,2,3]) (★★★)
+#### 94. Dada una matriz 10x3, extraiga las filas con valores no iguales (Ejemplo [2,2,3]) (★★★)
 `No hints provided...`
 
 ```python
-# Author: Robert Kern
+# Autor: Robert Kern
 
 Z = np.random.randint(0,5,(10,3))
 print(Z)
@@ -1163,7 +1214,7 @@ print(Z)
 E = np.all(Z[:,1:] == Z[:,:-1], axis=1)
 U = Z[~E]
 print(U)
-# soluiton for numerical arrays only, will work for any number of columns in Z
+# solution for numerical arrays only, will work for any number of columns in Z
 U = Z[Z.max(axis=1) != Z.min(axis=1),:]
 print(U)
 ```
@@ -1171,13 +1222,13 @@ print(U)
 `hint: np.unpackbits`
 
 ```python
-# Author: Warren Weckesser
+# Autor: Warren Weckesser
 
 I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128])
 B = ((I.reshape(-1,1) & (2**np.arange(8))) != 0).astype(int)
 print(B[:,::-1])
 
-# Author: Daniel T. McDonald
+# Autor: Daniel T. McDonald
 
 I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128], dtype=np.uint8)
 print(np.unpackbits(I[:, np.newaxis], axis=1))
@@ -1186,7 +1237,7 @@ print(np.unpackbits(I[:, np.newaxis], axis=1))
 `hint: np.ascontiguousarray | np.unique`
 
 ```python
-# Author: Jaime Fernández del Río
+# Autor: Jaime Fernández del Río
 
 Z = np.random.randint(0,2,(6,3))
 T = np.ascontiguousarray(Z).view(np.dtype((np.void, Z.dtype.itemsize * Z.shape[1])))
@@ -1194,7 +1245,7 @@ _, idx = np.unique(T, return_index=True)
 uZ = Z[idx]
 print(uZ)
 
-# Author: Andreas Kouzelis
+# Autor: Andreas Kouzelis
 # NumPy >= 1.13
 uZ = np.unique(Z, axis=0)
 print(uZ)
@@ -1203,7 +1254,7 @@ print(uZ)
 `hint: np.einsum`
 
 ```python
-# Author: Alex Riley
+# Autor: Alex Riley
 # Make sure to read: http://ajcr.net/Basic-guide-to-einsum/
 
 A = np.random.uniform(0,1,10)
@@ -1218,7 +1269,7 @@ np.einsum('i,j->ij', A, B)    # np.outer(A, B)
 `hint: np.cumsum, np.interp`
 
 ```python
-# Author: Bas Swinckels
+# Autor: Bas Swinckels
 
 phi = np.arange(0, 10*np.pi, 0.1)
 a = 1
@@ -1236,7 +1287,7 @@ y_int = np.interp(r_int, r, y)
 `hint: np.logical_and.reduce, np.mod`
 
 ```python
-# Author: Evgeni Burovski
+# Autor: Evgeni Burovski
 
 X = np.asarray([[1.0, 0.0, 3.0, 8.0],
                 [2.0, 0.0, 1.0, 1.0],
@@ -1250,7 +1301,7 @@ print(X[M])
 `hint: np.percentile`
 
 ```python
-# Author: Jessica B. Hamrick
+# Autor: Jessica B. Hamrick
 
 X = np.random.randn(100) # random 1D array
 N = 1000 # number of bootstrap samples
