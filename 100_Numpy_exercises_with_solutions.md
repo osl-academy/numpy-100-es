@@ -87,7 +87,7 @@ print(nz)
 Z = np.eye(3)
 print(Z)
 ```
-#### 12. Crea un vector 3x3x3 con valores random (★☆☆)
+#### 12. Crea un vector 3x3x3 con valores aleatorios (★☆☆)
 
 
 ```python
@@ -102,7 +102,7 @@ Z = np.random.random((10,10))
 Zmin, Zmax = Z.min(), Z.max()
 print(Zmin, Zmax)
 ```
-#### 14. Crea un vector de tamaño 30 con valores random y encuentre el valor promedio (★☆☆)
+#### 14. Crea un vector de tamaño 30 con valores aleatorios y encuentre el valor promedio (★☆☆)
 
 
 ```python
@@ -110,7 +110,7 @@ Z = np.random.random(30)
 m = Z.mean()
 print(m)
 ```
-#### 15. Crea un vector 2D con los valores de 1 en el borde (es decir en la primera y última filas y columnas) con valore de 0 en el interior (★☆☆)
+#### 15. Crea un vector 2D con los valores de 1 en el borde (es decir en la primera y última filas y columnas) con valores de 0 en el interior (★☆☆)
 
 
 ```python
@@ -118,7 +118,7 @@ Z = np.ones((10,10))
 Z[1:-1,1:-1] = 0
 print(Z)
 ```
-#### 16. ¿Cómo añadir un borde (llenado con ceros) a un vector existente? (★☆☆)
+#### 16. ¿Cómo añadir un borde (llenado con ceros) a una matriz existente? (★☆☆)
 
 
 ```python
@@ -166,13 +166,13 @@ Z[1::2,::2] = 1
 Z[::2,1::2] = 1
 print(Z)
 ```
-#### 20. Considere un (6,7,8) shape array, ¿Cuáles son los índices (x,y,z) del 100vo elemento? (★☆☆)
+#### 20. Considere un array de dimensiones (6,7,8), ¿Cuáles son los índices (x,y,z) del 100vo elemento? (★☆☆)
 
 
 ```python
 print(np.unravel_index(99,(6,7,8)))
 ```
-#### 21. Crea algo similar a un tablero de ajedez usando la función `tile` (★☆☆)
+#### 21. Cree algo similar a un tablero de ajedez usando la función `tile` (★☆☆)
 
 
 ```python
@@ -187,7 +187,7 @@ Z = np.random.random((5,5))
 Z = (Z - np.mean (Z)) / (np.std (Z))
 print(Z)
 ```
-#### 23. Crea un vector que tenga como elementos vectores que tengan el tipo de dato `ubyte` (RGBA)
+#### 23. Cree un tipo de dato especial (dtype) llamada color que pueda describir el color como cuatro números del tipo unsigned bytes (RGBA) (★☆☆)
 Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
 
 
@@ -208,7 +208,7 @@ print(Z)
 Z = np.ones((5,3)) @ np.ones((3,2))
 print(Z)
 ```
-#### 25. Dado un array 1D, niega todos los elemento que esten en el rango 3 a 8
+#### 25. Dado un array 1D, multiplica por (-1) todos los elementos que esten en el rango 3 a 8 (★☆☆)
 Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
 
 
@@ -219,7 +219,7 @@ Z = np.arange(11)
 Z[(3 < Z) & (Z < 8)] *= -1
 print(Z)
 ```
-#### 26. ¿Cuál es la salida del siguiente script? (★☆☆)
+#### 26. ¿Cuál es resulatdo de la ejecución del siguiente script? (★☆☆)
 ```python
 # Autor: Jake VanderPlas
 
@@ -256,7 +256,7 @@ Z <- Z
 Z/1/1
 Z<Z>Z
 ```
-#### 28. ¿Cuál es el resultado de las siguientes expresiones? (★☆☆)
+#### 28. ¿Cuál es el resultado de las siguientes operaciones? (★☆☆)
 ```python
 np.array(0) / np.array(0)
 np.array(0) // np.array(0)
@@ -269,7 +269,8 @@ print(np.array(0) / np.array(0))
 print(np.array(0) // np.array(0))
 print(np.array([np.nan]).astype(int).astype(float))
 ```
-#### 29. ¿Cómo redondear alejado de cero en un vector con valores tipo float?
+#### 29. ¿Cómo redondear alejado de cero en un vector con valores tipo float? (★☆☆)
+Es decir que si n = -0.12  redondear a -1 y si n = 1.2 redondear a 2
 How to round away from zero a float array ? (★☆☆)
 
 
@@ -341,7 +342,7 @@ np.divide(A,2,out=A)
 np.negative(A,out=A)
 np.multiply(A,B,out=A)
 ```
-#### 36. Extraiga la parte entera de valores positivos de un vector que contenga valores aleatorios usando 4 diferentes métodos
+#### 36. Extraiga la parte entera de valores positivos de un vector que contenga valores aleatorios, usando 4 diferentes métodos (★★☆)
 Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)
 
 
@@ -354,7 +355,7 @@ print(np.floor(Z))
 print(Z.astype(int))
 print(np.trunc(Z))
 ```
-#### 37. Crea una matriz 5x5 con los valores de las fin
+#### 37. Crea una matriz 5x5 con sus valores dentro del rango 0 - 4 (★★☆)
 Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
 
 
@@ -367,7 +368,7 @@ print(Z)
 Z = np.tile(np.arange(0, 5), (5,1))
 print(Z)
 ```
-#### 38. Cree una función que use "yield" para obtener 10 números enteros y úselos para construir un array(★☆☆)
+#### 38. Cree una función que use "yield" para obtener 10 números enteros y use la función para construir un array(★☆☆)
 Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
 
 
@@ -393,7 +394,7 @@ Z = np.random.random(10)
 Z.sort()
 print(Z)
 ```
-#### 41. ¿Cómo se sumaría un pequeño vector de manera que lo haga más rápida que usando la función np.sum? (★★☆)
+#### 41. ¿Cómo se sumaría un pequeño vector de manera que lo haga más rapidamente que usando la función np.sum? (★★☆)
 
 
 ```python
@@ -458,7 +459,7 @@ Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),
                              np.linspace(0,1,5))
 print(Z)
 ```
-#### 47. Dados dos vectores, X, e Y, construya la matriz de Cauchy C () (Cij =1/(xi - yj)) (★★☆)
+#### 47. Dados dos vectores, X, e Y, construya la matriz de Cauchy C (Cij =1/(xi - yj)) (★★☆)
 
 
 ```python
@@ -481,7 +482,8 @@ for dtype in [np.float32, np.float64]:
    print(np.finfo(dtype).max)
    print(np.finfo(dtype).eps)
 ```
-#### 49. ¿Cómo imprimir todos los valore de un vector? (★★☆)
+#### 49. ¿Cómo imprimir todos los valores de un vector? (★★☆)
+(Recuerde que cuando el vector es muy grade numpy suele mostrarlos en secciones o sólo una parte)
 
 
 ```python
@@ -509,7 +511,7 @@ Z = np.zeros(10, [ ('position', [ ('x', float, 1),
                                   ('b', float, 1)])])
 print(Z)
 ```
-#### 52. Considere un vector de lelementos aleatorios, de dimensiones 100x2, representado coordenadas (x, y), encuentre las distancias de entre todos los puntos en una matriz 100x100 (★★☆)
+#### 52. Considere un vector de elementos aleatorios, de dimensiones 100x2, representado coordenadas (x, y), encuentre las distancias de entre todos los puntos en una matriz 100x100 (★★☆)
 
 
 ```python
@@ -1218,7 +1220,8 @@ print(U)
 U = Z[Z.max(axis=1) != Z.min(axis=1),:]
 print(U)
 ```
-#### 95. Convert a vector of ints into a matrix binary representation (★★★)
+#### 95. Convierta un vector de enteros a una matriz que represente los enteros en binario (★★★)
+Convert a vector of ints into a matrix binary representation (★★★)
 
 
 ```python
@@ -1233,7 +1236,8 @@ print(B[:,::-1])
 I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128], dtype=np.uint8)
 print(np.unpackbits(I[:, np.newaxis], axis=1))
 ```
-#### 96. Given a two dimensional array, how to extract unique rows? (★★★)
+#### 96. Dadas dos matrices, ¿Cómo extraer filas que sean únicas? (★★★)
+Given a two dimensional array, how to extract unique rows? (★★★)
 
 
 ```python
@@ -1250,7 +1254,8 @@ print(uZ)
 uZ = np.unique(Z, axis=0)
 print(uZ)
 ```
-#### 97. Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
+#### 97. Considere dos vectores A y B, escriba usando `eisum` el equivalente de las funciones `inner`, `sum`, `outer` y `mul` (★★★)
+Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
 
 
 ```python
@@ -1283,7 +1288,10 @@ r_int = np.linspace(0, r.max(), 200) # regular spaced path
 x_int = np.interp(r_int, r, x)       # integrate path
 y_int = np.interp(r_int, r, y)
 ```
-#### 99. Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, i.e., the rows which only contain integers and which sum to n. (★★★)
+#### 99. Dado un entero n y una matriz X, seleccione de X las filas que pueden ser interpretadas como extraídas de una distribución multinomial con n grados.
+Es decir las filas que contengan enteros y que suman n. (★★★)
+Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, 
+i.e., the rows which only contain integers and which sum to n. (★★★)
 
 
 ```python
@@ -1297,7 +1305,10 @@ M = np.logical_and.reduce(np.mod(X, 1) == 0, axis=-1)
 M &= (X.sum(axis=-1) == n)
 print(X[M])
 ```
-#### 100. Compute bootstrapped 95% confidence intervals for the mean of a 1D array X (i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)
+#### 100. Calcule con un intervalo de confianza del 95% el promedio de un vector X.
+(es decir, volver a muestrear los elementos ddel vector N veces, calcular la media de cada muestra y luego calcular percentiles sobre los promedios). (★★★)
+Compute bootstrapped 95% confidence intervals for the mean of a 1D array X 
+(i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)
 
 
 ```python

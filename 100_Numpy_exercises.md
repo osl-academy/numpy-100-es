@@ -32,15 +32,15 @@ Archivos generados de manera automática. Vea la documentación para cambiar pre
 
 #### 11. Crea una matriz identidad de 3x3 (★☆☆)
 
-#### 12. Crea un vector 3x3x3 con valores random (★☆☆)
+#### 12. Crea un vector 3x3x3 con valores aleatorios (★☆☆)
 
 #### 13. Crea una matriz 10x10 con valores random y encuentra el valor máximo yel mínimo (★☆☆)
 
-#### 14. Crea un vector de tamaño 30 con valores random y encuentre el valor promedio (★☆☆)
+#### 14. Crea un vector de tamaño 30 con valores aleatorios y encuentre el valor promedio (★☆☆)
 
-#### 15. Crea un vector 2D con los valores de 1 en el borde (es decir en la primera y última filas y columnas) con valore de 0 en el interior (★☆☆)
+#### 15. Crea un vector 2D con los valores de 1 en el borde (es decir en la primera y última filas y columnas) con valores de 0 en el interior (★☆☆)
 
-#### 16. ¿Cómo añadir un borde (llenado con ceros) a un vector existente? (★☆☆)
+#### 16. ¿Cómo añadir un borde (llenado con ceros) a una matriz existente? (★☆☆)
 
 #### 17. ¿Cuál es el resultado de la siguiente expresión? (★☆☆)
 ```python
@@ -56,21 +56,21 @@ np.nan in set([np.nan])
 
 #### 19. Crea una matriz 8x8 y llénelo con un patrón similar al del tablero de ajedrez (★☆☆)
 
-#### 20. Considere un (6,7,8) shape array, ¿Cuáles son los índices (x,y,z) del 100vo elemento? (★☆☆)
+#### 20. Considere un array de dimensiones (6,7,8), ¿Cuáles son los índices (x,y,z) del 100vo elemento? (★☆☆)
 
-#### 21. Crea algo similar a un tablero de ajedez usando la función `tile` (★☆☆)
+#### 21. Cree algo similar a un tablero de ajedez usando la función `tile` (★☆☆)
 
 #### 22. Normalice una matriz de 5x5 que contiene valores aleatorios (normalize los elementos usando la fórmula z-score) (★☆☆)
 
-#### 23. Crea un vector que tenga como elementos vectores que tengan el tipo de dato `ubyte` (RGBA)
+#### 23. Cree un tipo de dato especial (dtype) llamada color que pueda describir el color como cuatro números del tipo unsigned bytes (RGBA) (★☆☆)
 Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
 
 #### 24. Multiplique una matriz 5x3 y otra 3x2 (producto cruz) (★☆☆)
 
-#### 25. Dado un array 1D, niega todos los elemento que esten en el rango 3 a 8
+#### 25. Dado un array 1D, multiplica por (-1) todos los elementos que esten en el rango 3 a 8 (★☆☆)
 Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
 
-#### 26. ¿Cuál es la salida del siguiente script? (★☆☆)
+#### 26. ¿Cuál es resulatdo de la ejecución del siguiente script? (★☆☆)
 ```python
 # Autor: Jake VanderPlas
 
@@ -90,14 +90,15 @@ Z/1/1
 Z<Z>Z
 ```
 
-#### 28. ¿Cuál es el resultado de las siguientes expresiones? (★☆☆)
+#### 28. ¿Cuál es el resultado de las siguientes operaciones? (★☆☆)
 ```python
 np.array(0) / np.array(0)
 np.array(0) // np.array(0)
 np.array([np.nan]).astype(int).astype(float)
 ```
 
-#### 29. ¿Cómo redondear alejado de cero en un vector con valores tipo float?
+#### 29. ¿Cómo redondear alejado de cero en un vector con valores tipo float? (★☆☆)
+Es decir que si n = -0.12  redondear a -1 y si n = 1.2 redondear a 2
 How to round away from zero a float array ? (★☆☆)
 
 #### 30. ¿Cómo encontrar valores comunes entre dos vectores? (★☆☆)
@@ -116,20 +117,20 @@ np.sqrt(-1) == np.emath.sqrt(-1)
 #### 35. ¿Cómo calcular ((A+B)*(-A/2)) (sin usar la función `copy`)?
 How to compute ((A+B)*(-A/2)) in place (without copy)? (★★☆)
 
-#### 36. Extraiga la parte entera de valores positivos de un vector que contenga valores aleatorios usando 4 diferentes métodos
+#### 36. Extraiga la parte entera de valores positivos de un vector que contenga valores aleatorios, usando 4 diferentes métodos (★★☆)
 Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)
 
-#### 37. Crea una matriz 5x5 con los valores de las fin
+#### 37. Crea una matriz 5x5 con sus valores dentro del rango 0 - 4 (★★☆)
 Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
 
-#### 38. Cree una función que use "yield" para obtener 10 números enteros y úselos para construir un array(★☆☆)
+#### 38. Cree una función que use "yield" para obtener 10 números enteros y use la función para construir un array(★☆☆)
 Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
 
 #### 39. Cree un vector de tamaño 10 con los valores en el rango 0 a 1 (0 y 1 excluidos). (★★☆)
 
 #### 40. Cree un vector de tamaño 10 con valores aleatorios, luego ordénelos (★★☆).
 
-#### 41. ¿Cómo se sumaría un pequeño vector de manera que lo haga más rápida que usando la función np.sum? (★★☆)
+#### 41. ¿Cómo se sumaría un pequeño vector de manera que lo haga más rapidamente que usando la función np.sum? (★★☆)
 
 #### 42. Considere 2 vectores A y B ¿Cómo verifica que son iguales? (★★☆)
 Consider two random array A and B, check if they are equal
@@ -144,17 +145,18 @@ Make an array immutable (read-only)
 #### 46. Crea un vector structurado (structured array) con `x` e `y` como coordenadas, que generen un grilla (meshgrid) en el área [0, 1]x[0, 1] (★★☆)
 Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] area
 
-#### 47. Dados dos vectores, X, e Y, construya la matriz de Cauchy C () (Cij =1/(xi - yj)) (★★☆)
+#### 47. Dados dos vectores, X, e Y, construya la matriz de Cauchy C (Cij =1/(xi - yj)) (★★☆)
 
 #### 48. Imprima el máximo y mínimo valor representable para un tipo de datos de numpy escalar (★★☆)
 
-#### 49. ¿Cómo imprimir todos los valore de un vector? (★★☆)
+#### 49. ¿Cómo imprimir todos los valores de un vector? (★★☆)
+(Recuerde que cuando el vector es muy grade numpy suele mostrarlos en secciones o sólo una parte)
 
 #### 50. ¿Cómo encontrar el valor más cercano a un valor(valor escalar) en un vector? (★★☆)
 
 #### 51. Crea un vector estructurada (structured array) representado la posición (x, y) y el color (r, g, b) (★★☆)
 
-#### 52. Considere un vector de lelementos aleatorios, de dimensiones 100x2, representado coordenadas (x, y), encuentre las distancias de entre todos los puntos en una matriz 100x100 (★★☆)
+#### 52. Considere un vector de elementos aleatorios, de dimensiones 100x2, representado coordenadas (x, y), encuentre las distancias de entre todos los puntos en una matriz 100x100 (★★☆)
 
 #### 53. ¿Cómo convertir un vector de float(32 bits) a un vector entero (32 bits) ?
 
@@ -294,14 +296,23 @@ Consider two arrays A and B of shape (8,3) and (2,2). How to find rows of A that
 
 #### 94. Dada una matriz 10x3, extraiga las filas con valores no iguales (Ejemplo [2,2,3]) (★★★)
 
-#### 95. Convert a vector of ints into a matrix binary representation (★★★)
+#### 95. Convierta un vector de enteros a una matriz que represente los enteros en binario (★★★)
+Convert a vector of ints into a matrix binary representation (★★★)
 
-#### 96. Given a two dimensional array, how to extract unique rows? (★★★)
+#### 96. Dadas dos matrices, ¿Cómo extraer filas que sean únicas? (★★★)
+Given a two dimensional array, how to extract unique rows? (★★★)
 
-#### 97. Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
+#### 97. Considere dos vectores A y B, escriba usando `eisum` el equivalente de las funciones `inner`, `sum`, `outer` y `mul` (★★★)
+Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
 
 #### 98. Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
 
-#### 99. Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, i.e., the rows which only contain integers and which sum to n. (★★★)
+#### 99. Dado un entero n y una matriz X, seleccione de X las filas que pueden ser interpretadas como extraídas de una distribución multinomial con n grados.
+Es decir las filas que contengan enteros y que suman n. (★★★)
+Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, 
+i.e., the rows which only contain integers and which sum to n. (★★★)
 
-#### 100. Compute bootstrapped 95% confidence intervals for the mean of a 1D array X (i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)
+#### 100. Calcule con un intervalo de confianza del 95% el promedio de un vector X.
+(es decir, volver a muestrear los elementos ddel vector N veces, calcular la media de cada muestra y luego calcular percentiles sobre los promedios). (★★★)
+Compute bootstrapped 95% confidence intervals for the mean of a 1D array X 
+(i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)
