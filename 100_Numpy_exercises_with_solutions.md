@@ -571,7 +571,7 @@ for index, value in np.ndenumerate(Z):
 for index in np.ndindex(Z.shape):
     print(index, Z[index])
 ```
-#### 56. Genera una matriz 2d tipo campana de Gauss típica (2D Gaussian-like array) (★★☆)
+#### 56. Genera una matriz 2d tipo campana de Gauss (sigma = 1, mu = 0) (2D Gaussian-like array) (★★☆)
 
 
 ```python
@@ -610,7 +610,7 @@ Y = X - X.mean(axis=1).reshape(-1, 1)
 
 print(Y)
 ```
-#### 59. Cómo ordenar una matriz teniendo como referencia la n ava columna (★★☆)
+#### 59. ¿Cómo ordenar una matriz teniendo como referencia la n ava columna? (★★☆)
 How to sort an array by the nth column? (★★☆)
 
 
@@ -621,8 +621,7 @@ Z = np.random.randint(0,10,(3,3))
 print(Z)
 print(Z[Z[:,1].argsort()])
 ```
-#### 60. ¿Cómo averiguar si una matriz tienen columnas nulas? (★★☆)
-How to tell if a given 2D array has null columns? (★★☆)
+#### 60. ¿Cómo averiguar si una matriz tiene columnas nulas? (★★☆)
 
 
 ```python
@@ -640,8 +639,7 @@ Z=np.array([
 ])
 print(np.isnan(Z).all(axis=0))
 ```
-#### 61. Encuentre el valor más cercano a un valor dado en un vector (★★☆) 
-Find the nearest value from a given value in an array (★★☆)
+#### 61. Encuentre el valor más cercano a un valor dado en un vector (★★☆)
 
 
 ```python
@@ -752,7 +750,7 @@ print(sum)
 sum = A.reshape(A.shape[:-2] + (-1,)).sum(axis=-1)
 print(sum)
 ```
-#### 68. Considere un vector unidemensional D, ¿cómo calcular los promedios de los subsets de D, si se tienen un vector S del mismo tamaño describiendo los índices de las posiciones de las cuáles deben obtenerse los promedios?(★★★)
+#### 68. Considere un vector unidimensional D, ¿cómo calcular los promedios de los subsets de D, si se tienen un vector S del mismo tamaño describiendo los índices de las posiciones de las cuáles deben obtenerse los promedios?(★★★)
 ```python
 # Sea por ejemplo D
 D = [0.3, 0.5, 0.2, 0.7, 1., -0.6]
@@ -841,7 +839,7 @@ G = F.view( dtype=[('p0',F.dtype),('p1',F.dtype)] )
 G = np.unique(G)
 print(G)
 ```
-#### 74. Dado un array ordenado C qur corresponde a el resultado de un bitcount, ¿cóm oproducir un array A tal que np.bincount(A) = C ? (★★★)
+#### 74. Dado un array ordenado C que corresponde a el resultado de un bitcount, ¿cómo producir un array A tal que np.bincount(A) = C ? (★★★)
 
 
 ```python
@@ -948,7 +946,8 @@ P1 = np.random.uniform(-10,10,(10,2))
 p = np.random.uniform(-10, 10, (10,2))
 print(np.array([distance(P0,P1,p_i) for p_i in p]))
 ```
-#### 80. Consider an arbitrary array, write a function that extract a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)
+#### 80. Considere una matriz arbitraria, escriba una función que extraiga una subparte con una forma fija y centrada en un elemento dado (rellene con un 'fill' cuando sea necesario)(★★★)
+Consider an arbitrary array, write a function that extract a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)
 
 
 ```python
@@ -995,7 +994,7 @@ print(R)
 Z = np.arange(1, 15, dtype=np.uint32)
 print(sliding_window_view(Z, window_shape=4))
 ```
-#### 82. Calcule el rango de un matriz (★★★)
+#### 82. Obtenga el rango de un matriz (★★★)
 
 
 ```python
@@ -1019,7 +1018,8 @@ print(rank)
 Z = np.random.randint(0,10,50)
 print(np.bincount(Z).argmax())
 ```
-#### 84. Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)
+#### 84. Extraiga todos los bloques contiguos 3x3 de una matriz de elementos aleatorios 10x10 (★★★)
+Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)
 
 
 ```python
@@ -1058,7 +1058,8 @@ S = symetric(np.random.randint(0,10,(5,5)))
 S[2,3] = 42
 print(S)
 ```
-#### 86. Consider a set of p matrices wich shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)
+#### 86. Consideremos un conjunto de p matrices cuya forma (n,n) y un conjunto de p vectores con forma (n,1). ¿Cómo calcular la suma de los productos de la matriz p a la vez? (el resultado tiene forma (n,1))(★★★)
+Consider a set of p matrices wich shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)
 
 
 ```python
@@ -1167,7 +1168,8 @@ def cartesian(arrays):
 
 print (cartesian(([1, 2, 3], [4, 5], [6, 7])))
 ```
-#### 91. How to create a record array from a regular array? (★★★)
+#### 91. ¿Cómo crear un registro a partir de un arrys normal? (★★★)
+How to create a record array from a regular array? (★★★)
 
 
 ```python
@@ -1270,7 +1272,8 @@ np.einsum('i,i->i', A, B) # A * B
 np.einsum('i,i', A, B)    # np.inner(A, B)
 np.einsum('i,j->ij', A, B)    # np.outer(A, B)
 ```
-#### 98. Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
+#### 98. Considere un camino descrito por dos vectores (X,Y), ¿Cómo tomar muestras del mismo usando muestras equidistantes? (★★★)
+Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
 
 
 ```python

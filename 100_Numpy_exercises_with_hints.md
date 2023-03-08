@@ -169,21 +169,19 @@ Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] 
 `hint: np.genfromtxt`
 #### 55. ¿Cuál es el equivalente de la función `enumerate` para vectores numpy? (★★☆)
 `hint: np.ndenumerate, np.ndindex`
-#### 56. Genera una matriz 2d tipo campana de Gauss típica (2D Gaussian-like array) (★★☆)
+#### 56. Genera una matriz 2d tipo campana de Gauss (sigma = 1, mu = 0) (2D Gaussian-like array) (★★☆)
 `hint: np.meshgrid, np.exp`
 #### 57. ¿Cómo poner aleatoriamente p elementos en un array 2d? (★★☆)
 `hint: np.put, np.random.choice`
 #### 58. Dada una matriz, resta a cada elemento de una fila el promedio de la fila (★★☆)
 Subtract the mean of each row of a matrix (★★☆)
 `hint: mean(axis=,keepdims=)`
-#### 59. Cómo ordenar una matriz teniendo como referencia la n ava columna (★★☆)
+#### 59. ¿Cómo ordenar una matriz teniendo como referencia la n ava columna? (★★☆)
 How to sort an array by the nth column? (★★☆)
 `hint: argsort`
-#### 60. ¿Cómo averiguar si una matriz tienen columnas nulas? (★★☆)
-How to tell if a given 2D array has null columns? (★★☆)
+#### 60. ¿Cómo averiguar si una matriz tiene columnas nulas? (★★☆)
 `hint: any, ~`
-#### 61. Encuentre el valor más cercano a un valor dado en un vector (★★☆) 
-Find the nearest value from a given value in an array (★★☆)
+#### 61. Encuentre el valor más cercano a un valor dado en un vector (★★☆)
 `hint: np.abs, argmin, flat`
 #### 62. Considere 2 arrays con dimensiones (1, 3) y (3, 1), ¿Cómo calcular su suma usando un iterador? (★★☆)
 Considering two arrays with shape (1,3) and (3,1), how to compute their sum using an iterator? (★★☆)
@@ -207,7 +205,7 @@ Considering a (w,h,3) image of (dtype=ubyte), compute the number of unique color
 #### 67. Considere un array de 4 dimensiones, ¿Cómo obtener la suma de las dos últimas dimensiones ó ejes? (★★★)
 Considering a four dimensions array, how to get sum over the last two axis at once? (★★★)
 `hint: sum(axis=(-2,-1))`
-#### 68. Considere un vector unidemensional D, ¿cómo calcular los promedios de los subsets de D, si se tienen un vector S del mismo tamaño describiendo los índices de las posiciones de las cuáles deben obtenerse los promedios?(★★★)
+#### 68. Considere un vector unidimensional D, ¿cómo calcular los promedios de los subsets de D, si se tienen un vector S del mismo tamaño describiendo los índices de las posiciones de las cuáles deben obtenerse los promedios?(★★★)
 ```python
 # Sea por ejemplo D
 D = [0.3, 0.5, 0.2, 0.7, 1., -0.6]
@@ -229,7 +227,7 @@ Consider the vector [1, 2, 3, 4, 5], how to build a new vector with 3 consecutiv
 #### 73. Sea un set de tripletes describiendo 10 triangulos (con lados compartidos), encuentre el set de las líneas que componen todos lo triangulos. (★★★)
 Consider a set of 10 triplets describing 10 triangles (with shared vertices), find the set of unique line segments composing all the  triangles (★★★)
 `hint: repeat, np.roll, np.sort, view, np.unique`
-#### 74. Dado un array ordenado C qur corresponde a el resultado de un bitcount, ¿cóm oproducir un array A tal que np.bincount(A) = C ? (★★★)
+#### 74. Dado un array ordenado C que corresponde a el resultado de un bitcount, ¿cómo producir un array A tal que np.bincount(A) = C ? (★★★)
 `hint: np.repeat`
 #### 75. ¿Cómo calcular los promedios de rango variable sobre un array? (★★★)
 ```python
@@ -257,20 +255,23 @@ R = [[0 1 2]
 #### 79. Sean dos sets puntos P0 y P1 tienen el mismo tamaño, el primer punto de P0 describe un línea con el primer punto de P1 y así con todos los elementos de P0 y P1, también se nos da un set de puntos P. 
 ¿Cómo calcular la distancia de los puntos  de P a cada linea que es descrita por los pares de puntos de los sets? (★★★)
 `No hints provided...`
-#### 80. Consider an arbitrary array, write a function that extract a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)
+#### 80. Considere una matriz arbitraria, escriba una función que extraiga una subparte con una forma fija y centrada en un elemento dado (rellene con un 'fill' cuando sea necesario)(★★★)
+Consider an arbitrary array, write a function that extract a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)
 `hint: minimum maximum`
 #### 81. Sea el vector Z = [1,2,3,4,5,6,7,8,9,10,11,12,13,14], ¿Cómo generar el vector R = [[1,2,3,4], [2,3,4,5], [3,4,5,6], ..., [11,12,13,14]]? (★★★)
 `hint: stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
-#### 82. Calcule el rango de un matriz (★★★)
+#### 82. Obtenga el rango de un matriz (★★★)
 `hint: np.linalg.svd, np.linalg.matrix_rank`
 #### 83. ¿Cómo encontrar el valor más frecuente en un array? (★★★)
 `hint: np.bincount, argmax`
-#### 84. Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)
+#### 84. Extraiga todos los bloques contiguos 3x3 de una matriz de elementos aleatorios 10x10 (★★★)
+Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)
 `hint: stride_tricks.as_strided, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
 #### 85. Crea un matriz cuya subclase tenga Z[i,j] = Z[j,i] (★★★)
 Create a 2D array subclass such that Z[i,j] == Z[j,i] (★★★)
 `hint: class method`
-#### 86. Consider a set of p matrices wich shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)
+#### 86. Consideremos un conjunto de p matrices cuya forma (n,n) y un conjunto de p vectores con forma (n,1). ¿Cómo calcular la suma de los productos de la matriz p a la vez? (el resultado tiene forma (n,1))(★★★)
+Consider a set of p matrices wich shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)
 `hint: np.tensordot`
 #### 87. Sea un 16x16 array, ¿cómo obtener la suma en bloques (tamaño del bloque 4x4)? (★★★)
 `hint: np.add.reduceat, from numpy.lib.stride_tricks import sliding_window_view (np>=1.20.0)`
@@ -287,7 +288,8 @@ Se trata de un juego de cero jugadores, lo que quiere decir que su evolución es
 `hint: np.argsort | np.argpartition`
 #### 90. Dado un arbitrario número de vectores, contruya el producto cartesiano (la combinación de cada elemento con todos lo elementos) (★★★)
 `hint: np.indices`
-#### 91. How to create a record array from a regular array? (★★★)
+#### 91. ¿Cómo crear un registro a partir de un arrys normal? (★★★)
+How to create a record array from a regular array? (★★★)
 `hint: np.core.records.fromarrays`
 #### 92. Dado un vector muy largo Z, calcule Z elevado a la potencia 3 usando 3 diferentes métodos (★★★)
 `hint: np.power, *, np.einsum`
@@ -305,7 +307,8 @@ Given a two dimensional array, how to extract unique rows? (★★★)
 #### 97. Considere dos vectores A y B, escriba usando `eisum` el equivalente de las funciones `inner`, `sum`, `outer` y `mul` (★★★)
 Considering 2 vectors A & B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)
 `hint: np.einsum`
-#### 98. Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
+#### 98. Considere un camino descrito por dos vectores (X,Y), ¿Cómo tomar muestras del mismo usando muestras equidistantes? (★★★)
+Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?
 `hint: np.cumsum, np.interp`
 #### 99. Dado un entero n y una matriz X, seleccione de X las filas que pueden ser interpretadas como extraídas de una distribución multinomial con n grados.
 Es decir las filas que contengan enteros y que suman n. (★★★)
